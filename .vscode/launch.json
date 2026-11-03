@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Depurar um cenário automatizado (ID CT)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "-m",
+        "automatizado",
+        "-k",
+        "${input:cenarioId}",
+        "--headed",
+        "--slowmo=500",
+        "-v",
+        "-s"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Depurar todos os cenários automatizados",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "-m",
+        "automatizado",
+        "--headed",
+        "--slowmo=500",
+        "-v",
+        "-s"
+      ],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "cenarioId",
+      "type": "promptString",
+      "description": "ID do cenário, por exemplo CT001, CT021 ou CT029",
+      "default": "CT001"
+    }
+  ]
+}
