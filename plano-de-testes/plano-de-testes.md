@@ -3,9 +3,13 @@
 ## 1. Identificação do projeto
 
 | Informação | Descrição |
+
 | Projeto | Desafio QA — SEA Tecnologia |
+
 | Aplicação | Sistema de cadastro e consulta de trabalhadores |
+
 | Tipo de aplicação | Interface Web e API REST |
+
 | Responsável | Monique |
 
 ## 2. Objetivo
