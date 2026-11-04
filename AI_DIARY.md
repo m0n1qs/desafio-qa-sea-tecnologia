@@ -29,8 +29,10 @@ Para garantir que as informações estivessem corretas:
 - Executei os testes automatizados e ajustei os códigos quando necessário.
 - Revisei os documentos
 
-## 4. IA's Utilizadas
+## 4. IAs utilizadas
 
 -Copilot
+
 -ChatGPT
+
 -Gemini
