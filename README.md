@@ -15,7 +15,7 @@ Objetivo: avaliar a aplicação de cadastro de trabalhadores por meio de testes 
 - Gherkin
 - Git e GitHub
 - Visual Studio Code
-- Hoppscotch
+- Postman
 
 ## 2. Escopo do projeto
 
