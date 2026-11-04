@@ -1,10 +1,14 @@
 ## BUG-001[Desktop][Chrome] - Não é possível cadastrar mais de uma atividade
+
 **Cenário Associado:** CT-010 - Adicionar múltiplas atividades 
+
 **Descrição:**
 Ao tentar cadastrar mais de uma atividade, sistema direciona usuário para página de listagem de funcionários, não permitindo concluir cadastro de funcionário com mais de uma atividade
 
 **Passos para reprodução:**
+
 **1.** Preencha campos obrigatórios para cadastro de funcionário 
+
 **2.** Clique em adicionar outra atividade atividade
 
 **Resultado esperado:**
