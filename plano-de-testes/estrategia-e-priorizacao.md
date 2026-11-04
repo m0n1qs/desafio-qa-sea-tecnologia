@@ -28,6 +28,6 @@ A prioridade foi definida considerando o impacto de cada problema sobre os dados
 
 | P2 – Média        | Gestão de trabalhadores   | Possibilidade de selecionar e editar registros, melhorar os filtros e disponibilizar consulta exclusiva de inativos.                                                                                                            |
 
-| P3 – Complementar | Atividades, EPIs e anexos | Inclusão de múltiplas atividades e EPIs, associação com CA e persistência de anexos de ASO.                                                                                                                                     |
+| P3 – Complementar | Atividades, EPIs e anexos | Inclusão de múltiplas atividades e EPIs, associação com CA.                                                                                                                                     |
 
 | P3 – Complementar | Validações e usabilidade  | Formatos numéricos, limites de texto, mensagens de erro, rótulos e estados dos controles.                                                                                                                                       |
