@@ -52,7 +52,7 @@ Feature: Cadastro de trabalhadores
     Then ele deve aparecer na listagem como inativo
 
   @CT009 @manual @web
-  Scenario: CT-009 - Cadastrar atividade e EPI
+  Scenario: CT-009 - Cadastrar atividade e EPI e CA
     Given preencho todos os campos obrigatórios para cadastro 
     When cadastro uma atividade, um EPI e seu CA
     Then a listagem deve apresentar os dados cadastrados

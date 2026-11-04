@@ -20,7 +20,9 @@ Feature: API de trabalhadores
   @CT020 @automatizado @api
   Scenario: CT-020 - Consultar métodos com OPTIONS
     When envio OPTIONS para "/employees"
-    Then verifico os métodos e os cabeçalhos CORS retornados
+    Then a API deve retornar um status HTTP válido
+    And devo identificar os métodos HTTP anunciados
+    And devo identificar os cabeçalhos CORS retornados
 
   @CT021 @manual @api
   Scenario: CT-021 - Avaliar dados pessoais retornados
@@ -40,14 +42,14 @@ Feature: API de trabalhadores
     Then verifico a resposta e a persistência do cadastro
 
   @CT024 @manual @api
-  Scenario: CT-024 - Atualizar trabalhador com PUT ou PATCH
-    Given que tenho autorização e um registro fictício isolado
-    When atualizo o registro com PUT ou PATCH
+  Scenario: CT-024 - Atualizar trabalhador com PUT 
+    Given que tenho um funcionário cadastrado
+    When atualizo o registro com PUT 
     Then verifico os campos alterados e preservados
 
   @CT025 @manual @api
   Scenario: CT-025 - Excluir trabalhador com DELETE
-    Given que tenho autorização e um registro fictício isolado
+    Given que tenho um funcionário cadastrado
     When excluo o registro com DELETE
     Then verifico a resposta e a remoção do registro
 
@@ -55,3 +57,43 @@ Feature: API de trabalhadores
   Scenario: CT-026 - Comparar interface com API
     When consulto o resumo da listagem e a resposta GET
     Then os totais de trabalhadores e ativos devem ser iguais
+
+  @CT028 @automatizado @api
+  Scenario: CT-028 - Comparar total de inativos inferido com API
+    Given que a interface não oferece um filtro exclusivo para inativos
+    When calculo os inativos pela listagem completa e consulto o GET
+    Then o total inferido deve coincidir com registros isActive false na API
+
+@CT029 @manual @api
+  Scenario: CT-029 - Atualizar trabalhador com PATCH 
+    Given que tenho um funcionário cadastrado
+    When atualizo o registro com PATCH 
+    Then verifico os campos alterados e preservados
+
+  @CT030 @automatizado @api
+  Scenario: CT-030 - Atualizar cargo e atividade com PUT
+    Given que o cenário cria um trabalhador fictício via POST e guarda o ID retornado
+    When atualizo o cargo e a atividade pelos valores de 1 a 5 com PUT
+    Then verifico cada valor persistido na resposta GET
+   
+
+  @CT031 @automatizado @api
+  Scenario: CT-031 - Atualizar cargo e atividade com PATCH
+    Given que o cenário cria um trabalhador fictício via POST e guarda o ID retornado
+    When atualizo parcialmente o cargo e a atividade pelos valores de 1 a 5
+    Then verifico cada valor enviado pela resposta GET
+    
+
+  @CT032 @automatizado @api
+  Scenario: CT-032 - Habilitar uso de EPI com PATCH
+    Given que o cenário cria um trabalhador fictício sem EPI e guarda o ID retornado
+    When altero usesEpi para true com PATCH
+    Then a resposta GET deve apresentar usesEpi true
+    
+
+  @CT033 @automatizado @api
+  Scenario: CT-033 - Desabilitar uso de EPI com PATCH
+    Given que o cenário cria um trabalhador fictício com EPI e guarda o ID retornado
+    When altero usesEpi para false com PATCH
+    Then a resposta GET deve apresentar usesEpi false
+    
