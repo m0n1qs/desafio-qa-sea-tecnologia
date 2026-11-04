@@ -21,6 +21,9 @@ evidences/prints/*
 !evidences/prints/*_evidencia.pdf
 !evidences/prints/README.md
 !evidences/prints/.gitkeep
+!evidences/prints/automatizados/
+evidences/prints/automatizados/*
+!evidences/prints/automatizados/*.pdf
 evidences/videos/*
 !evidences/videos/.gitkeep
 evidences/logs/*
