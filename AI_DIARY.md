@@ -28,3 +28,9 @@ Para garantir que as informações estivessem corretas:
 - Verifiquei requisições e respostas pelo navegador e Postman.
 - Executei os testes automatizados e ajustei os códigos quando necessário.
 - Revisei os documentos
+
+## 4. IA's Utilizadas
+
+-Copilot
+-ChatGPT
+-Gemini
