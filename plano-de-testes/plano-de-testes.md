@@ -21,13 +21,21 @@ O objetivo também é identificar e documentar defeitos, avaliar riscos e implem
 ## 3. Aplicação e ambiente de teste
 
 | Item | Configuração |
+
 | Aplicação Web | https://analista-teste.seatecnologia.com.br/ |
+
 | API REST | https://analista-teste.seatecnologia.com.br/employees |
+
 | Navegador | Google Chrome / Chromium |
+
 | Linguagem | Python |
+
 | Framework de testes | pytest |
+
 | Automação Web | Playwright |
+
 | Automação de API | Requests |
+
 | Especificação de cenários | Gherkin |
 
 
